@@ -1,0 +1,36 @@
+{
+  "name": "mixed-timeseries-chart",
+  "version": "1.0.0",
+  "description": "Chart with four time series drawn as area, bar, spline and line: shared tooltip, hover halos, zero dependencies (SVG).",
+  "type": "module",
+  "main": "src/chart.js",
+  "module": "src/chart.js",
+  "types": "src/chart.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/chart.d.ts",
+      "default": "./src/chart.js"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "chart",
+    "svg",
+    "time-series",
+    "area",
+    "spline",
+    "bar",
+    "tooltip"
+  ],
+  "license": "MIT"
+}

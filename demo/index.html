@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mixed-timeseries-chart — demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f6f6f6;
+      color: #1a1b18;
+    }
+    main { max-width: 900px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 20px; margin: 0 0 4px; }
+    p.hint { margin: 0 0 20px; color: #666; font-size: 14px; }
+    h2 { font-size: 15px; margin: 28px 0 8px; font-weight: 600; }
+    /* Панель как в референсе: розовая строка таблицы */
+    .panel {
+      background: #fcebeb;
+      border-radius: 6px;
+      padding: 8px;
+      display: flex;
+      align-items: stretch;
+      gap: 14px;
+    }
+    .panel .col {
+      width: 31px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 13px;
+      color: #1a1b18;
+    }
+    .panel .col div { background: #f6f5f3; border-radius: 3px; padding: 6px 4px; text-align: center; }
+    .panel .col div.head { background: #fff; font-weight: 700; }
+    .panel .col div.plain { background: transparent; }
+    #chart { width: 315px; height: 166px; }
+    #chart-wide { width: 100%; height: 260px; background: #fcebeb; border-radius: 6px; }
+    code { background: #eee; padding: 1px 4px; border-radius: 3px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>mixed-timeseries-chart</h1>
+    <p class="hint">Наведите курсор на график: общий тултип по дате, подсветка точек, утолщение линии при наведении на неё.</p>
+
+    <h2>1:1 с референсом (315&times;166)</h2>
+    <div class="panel">
+      <div class="col">
+        <div class="head">Tdy</div>
+        <div>0%</div><div>$0</div><div>$0</div><div>0</div><div>0</div><div class="plain">—</div>
+      </div>
+      <div id="chart"></div>
+    </div>
+
+    <h2>Тот же график на всю ширину (адаптивный)</h2>
+    <div id="chart-wide"></div>
+    <p class="hint">Инициализация: <code>createChart(el, { series: [...4 серии] })</code> — см. <code>demo/demo.js</code> и README.</p>
+  </main>
+  <script type="module" src="./demo.js"></script>
+</body>
+</html>
